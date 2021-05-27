@@ -1,0 +1,140 @@
+$primary-color:#316dc3;
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: $primary-color;
+    color: white;
+    .Social-media-icons i{
+        padding: 10px;
+        color: #fff;
+    }
+}
+
+
+@media only screen and (max-width: 900px) 
+{
+.header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    min-height: 30vh;
+    background-color: #316dc3;
+    color: white;
+    .header-paragraph{
+        margin: auto 1px;
+    }.Social-media-icons{
+        margin-top: 25px;
+    }
+    .header-buttons{
+       margin-bottom: 20px;
+       &:hover{
+           border: 1px solid greenyellow;
+       }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) 
+{
+.header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    min-height: 25vh;
+    background-color: #316dc3;
+    color: white;
+    .header-paragraph{
+        margin: auto 1px;
+    }.Social-media-icons{
+        margin-top: 25px;
+    }
+    .header-buttons{
+       margin-bottom: 30px;
+       &:hover{
+           border: 1px solid greenyellow;
+       }
+    }
+  }
+}
+@media only screen and (max-width: 492px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 20vh;
+        background-color: #316dc3;
+        color: white;
+        .Social-media-icons{
+            margin-top: 15px;
+        }
+        .header-buttons{
+           margin-bottom: 10px;
+        }
+      }
+    }
+
+// Navigation Bar Styling Start form Here 
+
+    nav{
+        background-color: #f7f8fa;
+        padding: 1px 20px;
+        .main{
+            list-style-type: none;
+            .items{
+                padding: 10px 5px;
+                font-size: 1rem;
+
+                .nav-links{
+                    text-decoration: none;
+                    display: block;
+                    width: 100%;
+                }
+                &:hover{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+        .logo{
+            font-size: 20px;
+        }
+    }
+
+    // Mobile menu
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .toggle{
+        cursor: pointer;
+         display: none;
+    }
+   
+    
+    @media screen and(max-width:900px) {
+        .items{
+            width: 100%;
+            order: 2;
+            text-align: center;
+            display: none;
+        }
+        .active{
+            display: block;
+        }
+      
+        .toggle{
+            display: block !important;
+            order: 1;
+        }
+    }
